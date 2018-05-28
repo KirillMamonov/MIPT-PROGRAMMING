@@ -1,0 +1,6 @@
+SELECT T.Q_NAME, T.Whites, T.Cnt - T.Whites FROM 
+(SELECT utQ.Q_ID, utQ.Q_NAME, 
+(SUM(SUM(utB.B_VOL)) OVER())/765 AS Whites, COUNT(*) OVER() AS Cnt 
+FROM utQ LEFT JOIN utB ON utQ.Q_ID = utB.B_Q_ID
+GROUP BY utQ.Q_ID, utQ.Q_NAME
+HAVING SUM(utB.B_VOL) = 765 OR SUM(utB.B_VOL) IS NULL) T
