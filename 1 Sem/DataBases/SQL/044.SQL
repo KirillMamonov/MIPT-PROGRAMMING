@@ -1,0 +1,3 @@
+SELECT DISTINCT name FROM ships WHERE name LIKE 'R%'
+UNION
+SELECT DISTINCT ship FROM outcomes WHERE ship LIKE 'R%'

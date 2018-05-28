@@ -1,0 +1,1 @@
+SELECT DISTINCT maker, speed FROM product INNER JOIN laptop ON product.model=laptop.model WHERE HD>=10
