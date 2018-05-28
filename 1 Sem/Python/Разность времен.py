@@ -1,0 +1,7 @@
+c1 = int(input())
+m1 = int(input())
+s1 = int(input())
+c2 = int(input())
+m2 = int(input())
+s2 = int(input())
+print((c2-c1)*3600+(m2-m1)*60+(s2-s1))
